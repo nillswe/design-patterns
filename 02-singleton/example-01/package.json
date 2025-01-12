@@ -1,0 +1,12 @@
+{
+  "name": "example-01",
+  "version": "1.0.0",
+  "main": "main.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon main.ts"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
