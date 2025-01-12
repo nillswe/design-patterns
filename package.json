@@ -1,0 +1,9 @@
+{
+  "name": "singleton",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
+}

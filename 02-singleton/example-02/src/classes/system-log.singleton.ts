@@ -1,5 +1,5 @@
 
-import { EventListener } from "./event-listener";
+import { EventListener } from "./event-listener.observer";
 
 
 type LogType = string[]

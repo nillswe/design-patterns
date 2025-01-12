@@ -1,4 +1,4 @@
-import { SystemLog } from "../classes/system-log"
+import { SystemLog } from "../classes/system-log.singleton"
 
 const logs = SystemLog.instance
 
