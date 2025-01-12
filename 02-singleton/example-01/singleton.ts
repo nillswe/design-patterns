@@ -19,17 +19,17 @@ export class Singleton {
 }
 
 
-export class Singleton2 {
-  static instance: Singleton2
+class Singleton2 {
+  // static instance: Singleton2
   private counter:number = 1
 
   constructor() {
-    if(Singleton2.instance) {
-      console.log("instance already exist")
-      return Singleton2.instance
-    }else {
-      Singleton2.instance =this
-    }
+    // if(Singleton2.instance) {
+    //   console.log("instance already exist")
+    //   return Singleton2.instance
+    // }else {
+    //   Singleton2.instance =this
+    // }
   }
 
   public doAction() {
@@ -37,3 +37,5 @@ export class Singleton2 {
     console.log("Second", this.counter)
   }
 } 
+
+export const singleton2 = new Singleton2()

@@ -1,4 +1,4 @@
-import {Singleton, Singleton2} from "./singleton"
+import {Singleton, singleton2} from "./singleton"
 
 import "./first-file"
 import "./second-file"
@@ -9,8 +9,8 @@ instance.doAction()
 
 console.log("\n")
 
-const copy1 = new Singleton2()
-const copy2 = new Singleton2()
+const copy1 = singleton2
+const copy2 = singleton2
 
 copy1.doAction()
 copy1.doAction()
