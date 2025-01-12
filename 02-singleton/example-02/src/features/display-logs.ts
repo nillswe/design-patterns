@@ -2,23 +2,28 @@ import { SystemLog } from "../classes/system-log"
 
 const logs = SystemLog.instance
 
+
+const renderItems = (container: HTMLUListElement, log: string) => {
+
+  const listElem = document.createElement('li')
+  listElem.textContent = log
+  container.appendChild(listElem)
+
+}
 export const renderLogs = (containerElement: HTMLElement | null) => {
   if (!containerElement) return
 
+  const listContainerElem = document.createElement('ul')
 
-  setInterval(() => {
+  logs.subscribe(() => {
+    const lastValue = logs.list[logs.list.length - 1]
+    renderItems(listContainerElem, lastValue)
+  })
 
-    const logsElem = document.createElement('ul')
-    const logList = logs.list()
 
-    logList.forEach(log => {
-      const item = document.createElement('li')
-      item.textContent = log
 
-      logsElem.append(item)
-    })
 
-    containerElement.innerHTML = logsElem.getHTML()
-  }, 1000)
+  containerElement.append(listContainerElem)
 
 }
+
