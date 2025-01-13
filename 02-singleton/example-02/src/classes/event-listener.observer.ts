@@ -1,11 +1,9 @@
-type CallbackFn = () => void;
-
+type CallbackFn = () => void
 
 export class EventListener {
   private listeners: Set<CallbackFn> = new Set()
 
-  constructor() {
-  }
+  constructor() {}
 
   public subscribe(callback: CallbackFn) {
     this.listeners.add(callback)
@@ -19,9 +17,7 @@ export class EventListener {
     this.listeners.delete(listener)
   }
 
-  public notify( ) {
+  public notify() {
     this.listeners.forEach(listener => listener())
   }
-
-
 }

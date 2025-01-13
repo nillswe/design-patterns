@@ -1,8 +1,8 @@
-import {SystemLog} from "../classes/system-log.singleton"
+import {SystemLog} from '../classes/system-log.singleton'
 
 const logs = SystemLog.instance
 
-export const renderCounter = (containerElement: HTMLElement | null) => {
+export const renderCounter = (containerElement: HTMLElement | null, name: string) => {
   if (!containerElement) return
   let counter = 0
 
@@ -12,10 +12,9 @@ export const renderCounter = (containerElement: HTMLElement | null) => {
   const updateCounter = () => {
     counter++
     counterElem.textContent = `Counter is ${counter}`
-    logs.append(`Counter updated to ${counter}`)
+    logs.append(`${name} - Counter updated to ${counter}`)
   }
 
   counterElem.addEventListener('click', () => updateCounter())
   containerElement.append(counterElem)
 }
-

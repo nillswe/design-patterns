@@ -4,7 +4,7 @@
   "main": "main.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon main.ts"
+    "dev": "nodemon src/main.ts"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"

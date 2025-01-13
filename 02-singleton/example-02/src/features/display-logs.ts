@@ -1,14 +1,11 @@
-import { SystemLog } from "../classes/system-log.singleton"
+import {SystemLog} from '../classes/system-log.singleton'
 
 const logs = SystemLog.instance
 
-
 const renderItems = (container: HTMLUListElement, log: string) => {
-
   const listElem = document.createElement('li')
   listElem.textContent = log
   container.appendChild(listElem)
-
 }
 export const renderLogs = (containerElement: HTMLElement | null) => {
   if (!containerElement) return
@@ -20,10 +17,5 @@ export const renderLogs = (containerElement: HTMLElement | null) => {
     renderItems(listContainerElem, lastValue)
   })
 
-
-
-
   containerElement.append(listContainerElem)
-
 }
-
